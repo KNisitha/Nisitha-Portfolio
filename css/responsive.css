@@ -1,0 +1,282 @@
+/* ==========================================================================
+   K. NISITHA — PROFESSIONAL DEVELOPER PORTFOLIO
+   Responsive Media Queries & Accessibility Breakpoints
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. LAPTOPS & INTERMEDIATE SCREENS (max-width: 1024px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1024px) {
+  :root {
+    --nav-height: 70px;
+  }
+
+  .hero-container {
+    gap: 2.5rem;
+  }
+
+  .hero-name {
+    font-size: 3.4rem;
+  }
+
+  .photo-card {
+    width: 320px;
+  }
+
+  .photo-frame {
+    height: 400px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+
+  .footer-social-col {
+    grid-column: span 3;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-glass);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. TABLETS & NAVIGATION COLLAPSE (max-width: 880px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 880px) {
+  /* Switch to hamburger navigation */
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3.5rem;
+  }
+
+  .hero-content {
+    align-items: center;
+    order: 2;
+  }
+
+  .hero-image-wrapper {
+    order: 1;
+    margin-top: 1rem;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-socials {
+    justify-content: center;
+  }
+
+  .hero-bio {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section {
+    padding: 4.5rem 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .timeline-item {
+    grid-template-columns: 30px 1fr;
+    gap: 1.25rem;
+  }
+
+  .timeline-card {
+    padding: 1.5rem;
+  }
+
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. MOBILE PHONES (max-width: 640px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 640px) {
+  .section-container {
+    padding: 0 1.25rem;
+  }
+
+  .hero-name {
+    font-size: 2.75rem;
+  }
+
+  .hero-bio {
+    font-size: 1.04rem;
+    line-height: 1.65;
+  }
+
+  .photo-card {
+    width: 270px;
+  }
+
+  .photo-frame {
+    height: 340px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .about-description {
+    padding: 1.5rem;
+  }
+
+  .about-highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-category-card {
+    padding: 1.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .internship-card {
+    padding: 1.5rem;
+  }
+
+  .internship-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cert-card {
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-info-panel, .contact-form-panel {
+    padding: 1.5rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-social-col {
+    grid-column: span 1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. ULTRA-SMALL DEVICES (max-width: 380px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 380px) {
+  .hero-name {
+    font-size: 2.3rem;
+  }
+
+  .photo-card {
+    width: 240px;
+  }
+
+  .photo-frame {
+    height: 300px;
+  }
+
+  .status-pill {
+    padding: 0.35rem 0.75rem;
+  }
+
+  .status-text {
+    font-size: 0.74rem;
+  }
+
+  .filter-btn {
+    font-size: 0.8rem;
+    padding: 0.45rem 0.9rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. ACCESSIBILITY: PREFERS REDUCED MOTION
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .floating-badge {
+    animation: none !important;
+  }
+
+  .status-indicator, .status-pulse-dot {
+    animation: none !important;
+  }
+
+  .typing-cursor {
+    display: none !important;
+  }
+
+  .photo-card:hover .photo-backdrop {
+    opacity: 0.45;
+  }
+
+  .card-glass:hover {
+    transform: none !important;
+  }
+
+  .btn:hover {
+    transform: none !important;
+  }
+}
